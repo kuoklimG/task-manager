@@ -89,12 +89,6 @@ button.add-task {
   background: #17a2b8; /* Teal for add task (modern and cool teal) */
 }
 
-/* Edit form buttons */
-.edit-form-container button {
-  background: #007bff; /* Blue background for save button */
-  margin-right: 0.2rem;
-}
-
 /* Ensure the form elements have a more spacious appearance */
 form input,
 form textarea {

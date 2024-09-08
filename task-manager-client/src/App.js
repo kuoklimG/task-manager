@@ -7,13 +7,13 @@ import './App.css';
 function App() {
   const [tasks, setTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);
-  const taskRefs = useRef({}); // Use useRef for storing task refs
+  const taskRefs = useRef({});
 
   useEffect(() => {
     axios.get('http://localhost:3001/tasks')
       .then((response) => setTasks(response.data))
       .catch((error) => console.error("Error fetching tasks:", error));
-  }, []); // Runs only once
+  }, []);
 
   const addTask = (task) => {
     setTasks([...tasks, task]);
@@ -57,9 +57,9 @@ function App() {
           <li
             key={task._id}
             ref={el => (taskRefs.current[task._id] = el)}
-            style={{ position: 'relative' }} // Ensure the task list items are positioned relative
+            style={{ position: 'relative' }}
           >
-            <div className={editingTask && editingTask._id === task._id ? 'edit-form-wrapper' : ''}>
+            <div className="task-info">
               <h3>{task.title}</h3>
               <p>{task.description}</p>
               <p>Status: {task.completed ? "Completed" : "Incomplete"}</p>
@@ -74,7 +74,7 @@ function App() {
             </div>
 
             {editingTask && editingTask._id === task._id && (
-              <div className="edit-form-container">
+              <div className="edit-form-wrapper">
                 <EditTaskForm
                   task={editingTask}
                   onUpdate={(updatedTask) => updateTask(editingTask._id, updatedTask)}
