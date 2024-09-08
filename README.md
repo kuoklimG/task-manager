@@ -11,30 +11,32 @@ Prerequisites
 - Node.js (v14+)
 - MongoDB (Local or MongoDB Atlas)
 - Git (Version control)
+- React 
 
 Installation
 
 1. Clone the repository:
-   git clone https://github.com/kuoklimG/task-manager.git
-   cd task-manager
+   - git clone https://github.com/kuoklimG/task-manager.git
+   - cd task-manager
 
 2. Install backend dependencies:
-   npm install
+   - cd task-manager-backend
+   - npm install
 
-3. Install frontend dependencies:
-   cd client
-   npm install
+4. Install frontend dependencies:
+   - cd task-manager-client
+   - npm install
 
-4. Set up MongoDB:
+6. Set up MongoDB:
    - Local MongoDB: Install and run MongoDB locally.
 
-5. Run the application:
+7. Run the application:
    - For both backend and frontend together:
      npm start
    - Or, run backend and frontend separately:
-     - Backend: npm run server
-     - Frontend: cd client && npm start
+     - Backend : cd task-manager-backend && node index.js
+     - Frontend: cd task-manager-client && npm start
 
-6. Open the app in your browser:
+8. Open the app in your browser:
    http://localhost:3000
 
