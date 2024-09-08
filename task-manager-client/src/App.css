@@ -1,0 +1,150 @@
+/* App.css */
+body {
+  font-family: 'Arial', sans-serif; /* Use a modern sans-serif font */
+  background-color: #f4f7f6; /* Light background color for a clean look */
+  color: #333; /* Dark text color for better readability */
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+  border-radius: 8px; /* Rounded corners */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+ul li {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background 0.3s; /* Smooth transition for background color */
+}
+
+ul li:hover {
+  background: #f9f9f9; /* Slightly different background on hover */
+}
+
+/* App.css */
+
+/* General button styles */
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-right: 0.2rem; /* Add gap between buttons */
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Specific button styles */
+button.complete {
+  background: #28a745; /* Green for complete (modern and softer green) */
+}
+
+button.incomplete {
+  background: #dc3545; /* Red for incomplete (modern and softer red) */
+}
+
+button.edit {
+  background: #007bff; /* Blue for edit (modern and clean blue) */
+}
+
+button.delete {
+  background: #e91e63; /* Pink color for delete button */
+  color: #fff; /* White color for the icon */
+}
+
+button.delete:hover {
+  background: #c2185b; /* Darker pink on hover */
+}
+
+button.add-task {
+  background: #17a2b8; /* Teal for add task (modern and cool teal) */
+}
+
+/* Edit form buttons */
+.edit-form-container button {
+  background: #007bff; /* Blue background for save button */
+  margin-right: 0.2rem;
+}
+
+/* Ensure the form elements have a more spacious appearance */
+form input,
+form textarea {
+  width: calc(100% - 2rem); /* Full width minus padding */
+  padding: 0.75rem; /* Increased padding for larger fields */
+  margin-bottom: 1rem; /* Gap between fields */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form input {
+  height: 2.5rem; /* Adjust height for input fields */
+}
+
+form textarea {
+  height: 5rem; /* Adjust height for textarea */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.edit-form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.edit-form-container h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.edit-task-form input,
+.edit-task-form textarea {
+  width: calc(100% - 2rem);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.edit-task-form button {
+  background: #2196f3; /* Blue background for save button */
+  margin-right: 0.5rem;
+}
